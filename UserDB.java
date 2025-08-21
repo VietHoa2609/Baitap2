@@ -1,16 +1,14 @@
 package murach.data;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import murach.business.User;
 
 public class UserDB {
-	private static List<User> users = new ArrayList<>();
-	public static void insert(User user) {
-        users.add(user);
-        System.out.println("Đã chèn: " + user.getFirstName() + ", " + user.getLastName() + ", " + user.getEmail());
-	}
 
+    // Hàm insert giả lập (sau này có thể đổi sang JDBC để lưu DB thật)
+    public static void insert(User user) {
+        // Tạm thời chỉ in ra console cho test
+        System.out.println("User saved: " + user.getEmail()
+                           + " - " + user.getFirstName()
+                           + " " + user.getLastName());
+    }
 }
-
